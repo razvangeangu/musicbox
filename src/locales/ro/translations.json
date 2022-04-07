@@ -1,0 +1,11 @@
+{
+  "name": "Karaoke",
+  "description": "O aplicație Karaoke.",
+  "routes": {
+    "home": "Acasă"
+  },
+  "notFound": {
+    "title": "Page nu a fost găsită.",
+    "info": "Pagina pe are ați încercat să o accesați a fost ștearsă sau nu a existat niciodată."
+  }
+}

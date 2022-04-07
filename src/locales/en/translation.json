@@ -1,0 +1,11 @@
+{
+  "name": "Karaoke",
+  "description": "A Karaoke application.",
+  "routes": {
+    "home": "Home"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "info": "The page you are looking for could have been deleted or never have existed."
+  }
+}

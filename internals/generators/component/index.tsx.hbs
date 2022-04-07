@@ -1,0 +1,53 @@
+/**
+*
+* {{ properCase componentName }}
+*
+*/
+{{#if wantMemo}}
+import React, { memo } from 'react';
+{{else}}
+import React from 'react';
+{{/if}}
+{{#if wantTranslations}}
+import { useTranslation } from 'react-i18next';
+{{/if}}
+{{#if wantStyledComponents}}
+import styled from 'styled-components/macro';
+{{/if}}
+
+interface {{ properCase componentName }}Props {}
+
+{{#if wantMemo}}
+export const {{ properCase componentName }} = memo((props: {{ properCase componentName }}Props) => {
+{{else}}
+export function {{ properCase componentName }}(props: {{ properCase componentName }}Props) {
+{{/if}}
+  {{#if wantTranslations}}
+  const { t } = useTranslation();
+  {{/if}}
+
+  return (
+  {{#if wantStyledComponents}}
+  <Container>
+  {{else}}
+  <div>
+  {{/if}}
+    {{#if wantTranslations}}
+    {t('')}
+    {{/if}}
+  {{#if wantStyledComponents}}
+  </Container>
+  {{else}}
+  </div>
+  {{/if}}
+  );
+
+{{#if wantMemo}}
+});
+{{else}}
+};
+{{/if}}
+
+{{#if wantStyledComponents}}
+const Container = styled.div``;
+{{/if}}
