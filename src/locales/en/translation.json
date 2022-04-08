@@ -1,6 +1,6 @@
 {
-  "name": "Karaoke",
-  "description": "A Karaoke application.",
+  "name": "MusicBox",
+  "description": "A MusicBox application.",
   "routes": {
     "home": "Home"
   },

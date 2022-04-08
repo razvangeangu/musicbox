@@ -14,7 +14,7 @@ jobs:
 
       - name: Install and Build 🔧
         env:
-          PUBLIC_URL: /karaoke
+          PUBLIC_URL: /musicbox
         run: |
           yarn
           yarn build

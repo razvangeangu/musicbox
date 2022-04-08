@@ -1,4 +1,4 @@
-# @razvangeangu/karaoke
+# @razvangeangu/musicbox
 
 ## Getting started
 

@@ -1,6 +1,6 @@
 {
-  "name": "Karaoke",
-  "description": "O aplicație Karaoke.",
+  "name": "MusicBox",
+  "description": "O aplicație MusicBox.",
   "routes": {
     "home": "Acasă"
   },
