@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/karaoke/static/css/main.e18a66c1.css",
+    "main.js": "/karaoke/static/js/main.ea425204.js",
+    "static/js/129.1355b658.chunk.js": "/karaoke/static/js/129.1355b658.chunk.js",
+    "static/js/651.48ca023f.chunk.js": "/karaoke/static/js/651.48ca023f.chunk.js",
+    "static/js/27.5ae6fbe9.chunk.js": "/karaoke/static/js/27.5ae6fbe9.chunk.js",
+    "index.html": "/karaoke/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.e18a66c1.css",
+    "static/js/main.ea425204.js"
+  ]
+}
