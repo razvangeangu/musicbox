@@ -103,6 +103,7 @@
     "@types/express": "4.17.13",
     "@types/fontfaceobserver": "2.1.0",
     "@types/jest": "27.4.1",
+    "@types/musickit-js": "1.0.2",
     "@types/node": "17.0.21",
     "@types/node-fetch": "2.6.1",
     "@types/react": "17.0.40",

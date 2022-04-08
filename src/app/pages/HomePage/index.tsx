@@ -12,6 +12,13 @@ import styled from 'styled-components/macro';
 export function HomePage() {
   const { t } = useTranslation();
 
+  // TODO: remove test
+  (async () => {
+    const music = MusicKit.getInstance();
+    // You should check authorization before accessing user's iCloud Music Library:
+    await music.authorize();
+  })();
+
   return (
     <>
       <Helmet>
