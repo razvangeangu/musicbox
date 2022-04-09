@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/musicbox/static/css/main.e18a66c1.css",
-    "main.js": "/musicbox/static/js/main.4c8aff03.js",
-    "static/js/640.3dc9bc89.chunk.js": "/musicbox/static/js/640.3dc9bc89.chunk.js",
-    "static/js/844.e6bbe3e0.chunk.js": "/musicbox/static/js/844.e6bbe3e0.chunk.js",
-    "static/js/945.c7a47da7.chunk.js": "/musicbox/static/js/945.c7a47da7.chunk.js",
-    "index.html": "/musicbox/index.html"
+    "main.css": "/musicbox/static/css/main.6dc24418.css",
+    "main.js": "/musicbox/static/js/main.54216f84.js",
+    "static/js/640.8a5d33c0.chunk.js": "/musicbox/static/js/640.8a5d33c0.chunk.js",
+    "static/js/906.44e7ecac.chunk.js": "/musicbox/static/js/906.44e7ecac.chunk.js",
+    "static/js/945.b2221dc4.chunk.js": "/musicbox/static/js/945.b2221dc4.chunk.js",
+    "static/js/257.c3263a4e.chunk.js": "/musicbox/static/js/257.c3263a4e.chunk.js",
+    "static/media/apple-music.svg": "/musicbox/static/media/apple-music.72a1fc977477ce91b0f1bd5ee86154fa.svg",
+    "index.html": "/musicbox/index.html",
+    "static/media/youtube.svg": "/musicbox/static/media/youtube.ae299a9a89959f7cd419d44daec3deab.svg",
+    "static/media/context-menu.svg": "/musicbox/static/media/context-menu.d169d421b83f1d0bab2f2c66b568ae19.svg"
   },
   "entrypoints": [
-    "static/css/main.e18a66c1.css",
-    "static/js/main.4c8aff03.js"
+    "static/css/main.6dc24418.css",
+    "static/js/main.54216f84.js"
   ]
 }
