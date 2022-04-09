@@ -15,6 +15,14 @@ jobs:
       - name: Install and Build 🔧
         env:
           PUBLIC_URL: /musicbox
+          REACT_APP_APPLE_MUSIC_TOKEN: ${{ secrets.REACT_APP_APPLE_MUSIC_TOKEN }}
+          REACT_APP_GOOGLE_API_KEY: ${{ secrets.REACT_APP_GOOGLE_API_KEY }}
+          REACT_APP_GOOGLE_CLIENT_ID: ${{ secrets.REACT_APP_GOOGLE_CLIENT_ID }}
+          REACT_APP_GOOGLE_PROJECT_ID: ${{ secrets.REACT_APP_GOOGLE_PROJECT_ID }}
+          REACT_APP_GOOGLE_AUTH_URI: ${{ secrets.REACT_APP_GOOGLE_AUTH_URI }}
+          REACT_APP_GOOGLE_TOKEN_URI: ${{ secrets.REACT_APP_GOOGLE_TOKEN_URI }}
+          REACT_APP_GOOGLE_AUTH_PROVIDER_X509_CERT_URL: ${{ secrets.REACT_APP_GOOGLE_AUTH_PROVIDER_X509_CERT_URL }}
+          REACT_APP_GOOGLE_CLIENT_SECRET: ${{ secrets.REACT_APP_GOOGLE_CLIENT_SECRET }}
         run: |
           yarn
           yarn build
