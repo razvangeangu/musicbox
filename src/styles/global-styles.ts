@@ -8,14 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${p => p.theme.background};
-    color: ${p => p.theme.text.default};
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-
-  /* stylelint-disable-next-line selector-no-qualifying-type,selector-class-pattern */
-  body.fontLoaded {
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,'Apple Color Emoji','SF Pro','SF Pro Icons','Helvetica Neue',Helvetica,Arial,sans-serif;
   }
 
   /* stylelint-disable-next-line selector-max-id */

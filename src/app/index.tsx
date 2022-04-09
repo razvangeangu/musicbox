@@ -6,6 +6,7 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
+import { Layout } from 'app/components/Layout';
 import { NotFoundPage } from 'app/components/NotFoundPage/Loadable';
 import { HomePage } from 'app/pages/HomePage/Loadable';
 import dayjs from 'dayjs';
@@ -33,8 +34,10 @@ export function App() {
       </Helmet>
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
       </Routes>
       <GlobalStyle />
     </BrowserRouter>

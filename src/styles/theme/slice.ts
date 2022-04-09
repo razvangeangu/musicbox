@@ -22,8 +22,23 @@ export const selectTheme = createSelector(
   [(state: RootState) => state.theme || initialState],
   theme => {
     if (theme.selected === 'system') {
+      if (isSystemDark) {
+        document.body.classList.add('dark-theme');
+      } else {
+        document.body.classList.remove('dark-theme');
+        document.body.classList.add('light-theme');
+      }
+
       return isSystemDark ? themes.dark : themes.light;
     }
+
+    if (theme.selected === 'dark') {
+      document.body.classList.add('dark-theme');
+    } else {
+      document.body.classList.remove('dark-theme');
+      document.body.classList.add('light-theme');
+    }
+
     return themes[theme.selected];
   },
 );

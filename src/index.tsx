@@ -11,7 +11,6 @@ import 'react-app-polyfill/stable';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import FontFaceObserver from 'fontfaceobserver';
 
 // Use consistent styling
 import 'sanitize.css/sanitize.css';
@@ -30,15 +29,14 @@ import './locales/i18n';
 
 import 'dayjs/locale/ro';
 
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 import { ThemeProvider } from 'styles/theme/ThemeProvider';
 
-// Observe loading of custom-font (to remove 'custom-font', remove the <link> tag in
-// the index.html file and this observer)
-const customFontObserver = new FontFaceObserver('Roboto', {});
-
-// When custom-font is loaded, add a font-family using custom-font to the body
-customFontObserver.load().then(() => {
-  document.body.classList.add('fontLoaded');
+gapi.load('client:auth2', () => {
+  gapi.auth2.init({
+    client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+  });
 });
 
 const store = configureAppStore();
@@ -68,3 +66,14 @@ if (module.hot) {
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// TODO: get better typings
+declare global {
+  export namespace JSX {
+    interface IntrinsicElements {
+      'apple-music-volume': any;
+      'apple-music-playback-controls': any;
+      'apple-music-progress': any;
+    }
+  }
+}

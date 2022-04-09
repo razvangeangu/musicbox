@@ -1,18 +1,6 @@
-const lightTheme = {
-  background: '#fff',
+const lightTheme = {};
 
-  text: {
-    default: '#000',
-  },
-};
-
-const darkTheme: Theme = {
-  background: '#000',
-
-  text: {
-    default: '#fff',
-  },
-};
+const darkTheme: Theme = {};
 
 export type Theme = typeof lightTheme;
 

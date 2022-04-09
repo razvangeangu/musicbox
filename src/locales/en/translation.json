@@ -7,5 +7,10 @@
   "notFound": {
     "title": "Page not found",
     "info": "The page you are looking for could have been deleted or never have existed."
-  }
+  },
+  "navbar": {
+    "connected": "Connected",
+    "disconnected": "Connect {{provider}}"
+  },
+  "thumbnail": "Thumbnail"
 }

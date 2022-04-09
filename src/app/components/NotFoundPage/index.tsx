@@ -41,7 +41,6 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-  color: ${p => p.theme.text.default};
   font-size: 3.375rem;
   font-weight: bold;
   margin-top: -8vh;
