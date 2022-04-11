@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/musicbox/static/css/main.6dc24418.css",
-    "main.js": "/musicbox/static/js/main.f3959ef9.js",
+    "main.js": "/musicbox/static/js/main.d5480325.js",
     "static/js/640.8a5d33c0.chunk.js": "/musicbox/static/js/640.8a5d33c0.chunk.js",
-    "static/js/230.32aa532e.chunk.js": "/musicbox/static/js/230.32aa532e.chunk.js",
+    "static/js/919.b0c20a90.chunk.js": "/musicbox/static/js/919.b0c20a90.chunk.js",
     "static/js/945.b2221dc4.chunk.js": "/musicbox/static/js/945.b2221dc4.chunk.js",
     "static/js/257.c3263a4e.chunk.js": "/musicbox/static/js/257.c3263a4e.chunk.js",
     "static/media/apple-music.svg": "/musicbox/static/media/apple-music.72a1fc977477ce91b0f1bd5ee86154fa.svg",
@@ -14,6 +14,6 @@
   },
   "entrypoints": [
     "static/css/main.6dc24418.css",
-    "static/js/main.f3959ef9.js"
+    "static/js/main.d5480325.js"
   ]
 }
