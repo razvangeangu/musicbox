@@ -1,6 +1,6 @@
 /**
  *
- * Layout
+ * MusicItem
  *
  */
 import { YOUTUBE_NO_THUMB_URL } from 'api/youtube';
@@ -12,6 +12,7 @@ import { ReactComponent as ContextMenuSvg } from './assets/context-menu.svg';
 import { ReactComponent as PlaySvg } from './assets/play-button.svg';
 
 export interface MusicItemProps {
+  className?: string;
   name: string;
   thumbnailUrl?: string;
   onClickItem?: () => void;
@@ -19,6 +20,7 @@ export interface MusicItemProps {
 }
 
 export default function MusicItem({
+  className,
   name,
   thumbnailUrl,
   onClickItem,
@@ -37,7 +39,7 @@ export default function MusicItem({
   };
 
   return (
-    <PlaylistItem tabIndex={0} onClick={didClickItem}>
+    <PlaylistItem className={className} tabIndex={0} onClick={didClickItem}>
       <PlaylistPreview>
         <PlaylistItemThumb
           // TODO: change to generic no thumb

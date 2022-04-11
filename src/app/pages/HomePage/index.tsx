@@ -4,6 +4,7 @@
  *
  */
 import { youtube } from 'api';
+import ProgressIndicator from 'app/components/ProgressIndicator';
 import { AppleMusicResults } from 'app/pages/HomePage/components/AppleMusicResults';
 import { PlaylistItems } from 'app/pages/HomePage/components/PlaylistItems';
 import { translations } from 'locales/translations';
@@ -16,6 +17,8 @@ import styled, { css } from 'styled-components/macro';
 export function HomePage() {
   const { t } = useTranslation();
 
+  const [isLoadingPlaylists, setIsLoadingPlaylists] = useState(false);
+
   const [selectedCarouselIndex, setSelectedCarouselIndex] = useState<number>(0);
 
   const [selectedPlaylistItem, setSelectedPlaylistItem] =
@@ -26,8 +29,10 @@ export function HomePage() {
 
   useEffect(() => {
     (async () => {
+      setIsLoadingPlaylists(true);
       const response = await youtube.getMyPlaylists();
       setPlaylists(response);
+      setIsLoadingPlaylists(false);
     })();
   }, []);
 
@@ -56,6 +61,19 @@ export function HomePage() {
       <BackgroundContainer />
 
       <Container>
+        <FlexContainer>
+          <SizedContainer>
+            <h2>{t(translations.youtubeResults.header)}</h2>
+            <span>{t(translations.appleMusicResults.initialStatusText)}</span>
+
+            {isLoadingPlaylists && !playlists?.items?.length && (
+              <ProgressIndicatorContainer>
+                <ProgressIndicator />
+              </ProgressIndicatorContainer>
+            )}
+          </SizedContainer>
+        </FlexContainer>
+
         <Carousel
           showThumbs={false}
           autoPlay={false}
@@ -189,4 +207,32 @@ const BackgroundContainer = styled.div`
   @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
     backdrop-filter: saturate(50%) blur(20px);
   }
+`;
+
+const SizedContainer = styled.div`
+  max-width: 60rem;
+  width: 100%;
+
+  h2 {
+    padding-bottom: 0.25rem;
+  }
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 2rem;
+  text-align: left;
+  width: 100%;
+`;
+
+const ProgressIndicatorContainer = styled.div`
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 `;

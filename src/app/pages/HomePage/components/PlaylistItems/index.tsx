@@ -5,6 +5,7 @@
  */
 import { youtube } from 'api';
 import MusicItem from 'app/components/MusicItem';
+import ProgressIndicator from 'app/components/ProgressIndicator';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
 
@@ -17,6 +18,8 @@ export function PlaylistItems({
   playlistId,
   onItemSelected,
 }: PlaylistItemsProps) {
+  const [isLoading, setIsLoading] = useState(false);
+
   const [playlistItems, setPlaylistItems] =
     useState<gapi.client.youtube.PlaylistItemListResponse | null>();
 
@@ -24,9 +27,12 @@ export function PlaylistItems({
     (async () => {
       if (!playlistId) return;
 
+      setIsLoading(true);
+
       const response = await youtube.getMyPlaylistItems(playlistId);
 
       setPlaylistItems(response);
+      setIsLoading(false);
     })();
   }, [playlistId]);
 
@@ -36,6 +42,12 @@ export function PlaylistItems({
 
   return (
     <Container>
+      {isLoading && (
+        <ProgressIndicatorContainer>
+          <ProgressIndicator />
+        </ProgressIndicatorContainer>
+      )}
+
       {playlistItems?.items?.map(playlistItem => (
         <MusicItem
           name={playlistItem.snippet?.title!}
@@ -51,6 +63,16 @@ export function PlaylistItems({
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
   position: absolute;
   width: 100%;
+`;
+
+const ProgressIndicatorContainer = styled.div`
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
 `;
