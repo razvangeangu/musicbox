@@ -94,6 +94,7 @@ const Container = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 99;
 
   ${backdropFilter}
 `;

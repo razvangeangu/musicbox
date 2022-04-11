@@ -4,6 +4,7 @@
  *
  */
 import { youtube } from 'api';
+import { AppleMusicResults } from 'app/pages/HomePage/components/AppleMusicResults';
 import { PlaylistItems } from 'app/pages/HomePage/components/PlaylistItems';
 import { translations } from 'locales/translations';
 import React, { useEffect, useState } from 'react';
@@ -17,6 +18,9 @@ export function HomePage() {
 
   const [selectedCarouselIndex, setSelectedCarouselIndex] = useState<number>(0);
 
+  const [selectedPlaylistItem, setSelectedPlaylistItem] =
+    useState<gapi.client.youtube.PlaylistItem>();
+
   const [playlists, setPlaylists] =
     useState<gapi.client.youtube.PlaylistListResponse | null>();
 
@@ -29,6 +33,10 @@ export function HomePage() {
 
   const didChangeCarousel: CarouselProps['onChange'] = index => {
     setSelectedCarouselIndex(index);
+  };
+
+  const didSelectPlaylistItem = (item: gapi.client.youtube.PlaylistItem) => {
+    setSelectedPlaylistItem(item);
   };
 
   return (
@@ -57,7 +65,7 @@ export function HomePage() {
           swipeable
           emulateTouch
           centerMode
-          centerSlidePercentage={80}
+          centerSlidePercentage={75}
           onChange={didChangeCarousel}
         >
           {playlists?.items?.map((item, itemIndex) => (
@@ -81,12 +89,15 @@ export function HomePage() {
                 <Trailing>
                   <PlaylistItems
                     playlistId={playlists?.items?.[selectedCarouselIndex].id}
+                    onItemSelected={didSelectPlaylistItem}
                   />
                 </Trailing>
               )}
             </Playlist>
           ))}
         </Carousel>
+
+        <AppleMusicResults itemTitle={selectedPlaylistItem?.snippet?.title} />
       </Container>
     </>
   );
@@ -109,15 +120,7 @@ const Playlist = styled.div<{ selected: boolean }>`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
-
-  .carousel-root {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-  }
 
   .selected {
     + * {

@@ -3,20 +3,20 @@
  * PlaylistItems
  *
  */
-import { youtube, YOUTUBE_NO_THUMB_URL } from 'api';
-import { translations } from 'locales/translations';
+import { youtube } from 'api';
+import MusicItem from 'app/components/MusicItem';
 import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import styled from 'styled-components/macro';
-import { ReactComponent as ContextMenuSvg } from './assets/context-menu.svg';
 
 export interface PlaylistItemsProps {
   playlistId?: string;
+  onItemSelected?: (item: gapi.client.youtube.PlaylistItem) => void;
 }
 
-export function PlaylistItems({ playlistId }: PlaylistItemsProps) {
-  const { t } = useTranslation();
-
+export function PlaylistItems({
+  playlistId,
+  onItemSelected,
+}: PlaylistItemsProps) {
   const [playlistItems, setPlaylistItems] =
     useState<gapi.client.youtube.PlaylistItemListResponse | null>();
 
@@ -30,22 +30,19 @@ export function PlaylistItems({ playlistId }: PlaylistItemsProps) {
     })();
   }, [playlistId]);
 
+  const didClickItem = (item: gapi.client.youtube.PlaylistItem) => {
+    onItemSelected?.(item);
+  };
+
   return (
     <Container>
       {playlistItems?.items?.map(playlistItem => (
-        <PlaylistItem key={playlistItem.id} tabIndex={0}>
-          <PlaylistItemThumb
-            src={
-              playlistItem.snippet?.thumbnails?.default?.url ||
-              YOUTUBE_NO_THUMB_URL
-            }
-            alt={t(translations.thumbnail)}
-          />
-          <PlaylistItemTitle>{playlistItem.snippet?.title}</PlaylistItemTitle>
-          <PlaylistContextMenuButton type="button">
-            <PlaylistContextMenuIcon as={ContextMenuSvg} />
-          </PlaylistContextMenuButton>
-        </PlaylistItem>
+        <MusicItem
+          name={playlistItem.snippet?.title!}
+          thumbnailUrl={playlistItem.snippet?.thumbnails?.default?.url}
+          key={playlistItem.id}
+          onClickItem={() => didClickItem(playlistItem)}
+        />
       ))}
     </Container>
   );
@@ -56,41 +53,4 @@ const Container = styled.div`
   flex-direction: column;
   position: absolute;
   width: 100%;
-`;
-
-const PlaylistItem = styled.div`
-  align-content: center;
-  align-items: center;
-  border-radius: 0.25rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  outline: none !important;
-  padding: 0.375rem 0.5rem;
-  text-align: left;
-
-  &:hover {
-    background-color: var(--tracklistHoverColor);
-  }
-`;
-
-const PlaylistItemThumb = styled.img`
-  background-size: cover;
-  border-radius: 0.25rem;
-  height: 2rem;
-  margin-right: 0.625rem;
-  width: 2rem !important;
-`;
-
-const PlaylistItemTitle = styled.span`
-  flex: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-`;
-
-const PlaylistContextMenuButton = styled.button``;
-
-const PlaylistContextMenuIcon = styled.svg`
-  fill: var(--keyColor);
 `;

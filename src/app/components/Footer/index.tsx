@@ -35,6 +35,7 @@ const Container = styled.footer`
   padding: 1rem 1rem 0.3125rem;
   position: fixed;
   width: 100%;
+  z-index: 99;
 
   apple-music-playback-controls {
     margin: 0 0 0.6875rem;

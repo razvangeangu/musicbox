@@ -2329,10 +2329,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.2.tgz#ee771e2ba4b3dc5b372935d549fd9617bf345b8c"
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
-"@types/musickit-js@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@types/musickit-js/-/musickit-js-1.0.2.tgz#8d93da8673572b67a5553b326c49f673c0872a74"
-  integrity sha512-nlAiwJspdThC0bdGlU7mxdzntxl+EGJmwY3vYYzvdZmeV3SDnFfqwKzp2W49uTOKPf9T75m68u72+4pJ07V7XQ==
+"@types/musickit-js@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@types/musickit-js/-/musickit-js-1.0.3.tgz#2eea3b54347ac82dbd38196ed9b4c97e247fb6ea"
+  integrity sha512-aD1hLCzigEXjJDST/Lf4mfLUw8P4E7Gr8Ma1pwtUWVCl45PGOdgCT+BYgVnBd6PFg6wN0r5UhMz2t8hPKW+K7w==
 
 "@types/node-fetch@2.6.1":
   version "2.6.1"
