@@ -20,5 +20,8 @@
   },
   "youtubeResults": {
     "header": "My YouTube Playlists"
+  },
+  "footer": {
+    "notPlaying": "Select a song to play"
   }
 }

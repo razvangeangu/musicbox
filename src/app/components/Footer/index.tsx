@@ -3,7 +3,9 @@
  * Footer
  *
  */
+import { translations } from 'locales/translations';
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components/macro';
 import { backdropFilter } from 'styles/constants';
@@ -11,6 +13,7 @@ import { selectThemeKey } from 'styles/theme/slice';
 import { isSystemDark } from 'styles/theme/utils';
 
 export function Footer() {
+  const { t } = useTranslation();
   const theme = useSelector(selectThemeKey);
   const selectedTheme =
     // eslint-disable-next-line no-nested-ternary
@@ -41,7 +44,9 @@ export function Footer() {
       <apple-music-playback-controls theme={selectedTheme} />
       <ProgressContainer>
         <CurrentMediaItem>
-          {`${mediaItems?.[0]?.artistName} - ${mediaItems?.[0]?.title}`}
+          {mediaItems?.[0]
+            ? `${mediaItems?.[0]?.artistName} - ${mediaItems?.[0]?.title}`
+            : t(translations.footer.notPlaying)}
         </CurrentMediaItem>
         <apple-music-progress theme={selectedTheme} />
       </ProgressContainer>

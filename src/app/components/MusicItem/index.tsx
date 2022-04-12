@@ -8,7 +8,7 @@ import { translations } from 'locales/translations';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components/macro';
-import { ReactComponent as ContextMenuSvg } from './assets/context-menu.svg';
+import { ReactComponent as AddSvg } from './assets/add.svg';
 import { ReactComponent as PlaySvg } from './assets/play-button.svg';
 
 export interface MusicItemProps {
@@ -17,6 +17,7 @@ export interface MusicItemProps {
   thumbnailUrl?: string;
   onClickItem?: () => void;
   onClickPreview?: () => void;
+  onClickAddToPlaylist?: () => void;
 }
 
 export default function MusicItem({
@@ -25,6 +26,7 @@ export default function MusicItem({
   thumbnailUrl,
   onClickItem,
   onClickPreview,
+  onClickAddToPlaylist,
 }: MusicItemProps) {
   const { t } = useTranslation();
 
@@ -38,6 +40,14 @@ export default function MusicItem({
     onClickPreview?.();
   };
 
+  const didClickAddToPlaylistButton: React.MouseEventHandler<
+    HTMLButtonElement
+  > = event => {
+    event.stopPropagation();
+
+    onClickAddToPlaylist?.();
+  };
+
   return (
     <PlaylistItem className={className} tabIndex={0} onClick={didClickItem}>
       <PlaylistPreview>
@@ -47,15 +57,20 @@ export default function MusicItem({
           alt={t(translations.thumbnail)}
         />
         {onClickPreview && (
-          <PlaylistPreviewButton onClick={didClickPreview}>
+          <PlaylistPreviewButton type="button" onClick={didClickPreview}>
             <PlaylistPlayIcon as={PlaySvg} />
           </PlaylistPreviewButton>
         )}
       </PlaylistPreview>
       <PlaylistItemTitle>{name}</PlaylistItemTitle>
-      <PlaylistContextMenuButton type="button">
-        <PlaylistContextMenuIcon as={ContextMenuSvg} />
-      </PlaylistContextMenuButton>
+      {onClickAddToPlaylist && (
+        <PlaylistContextButton
+          type="button"
+          onClick={didClickAddToPlaylistButton}
+        >
+          <PlaylistContextIcon as={AddSvg} />
+        </PlaylistContextButton>
+      )}
     </PlaylistItem>
   );
 }
@@ -116,9 +131,9 @@ const PlaylistItemTitle = styled.span`
   white-space: nowrap;
 `;
 
-const PlaylistContextMenuButton = styled.button``;
+const PlaylistContextButton = styled.button``;
 
-const PlaylistContextMenuIcon = styled.svg`
+const PlaylistContextIcon = styled.svg`
   fill: var(--keyColor);
 `;
 

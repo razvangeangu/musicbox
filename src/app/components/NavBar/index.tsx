@@ -12,6 +12,7 @@ import { backdropFilter } from 'styles/constants';
 import { media } from 'styles/media';
 import { noop } from 'utils/no-op';
 import { ReactComponent as AppleMusicSvg } from './assets/apple-music.svg';
+import { ReactComponent as LogoSvg } from './assets/logo.svg';
 import { ReactComponent as YouTubeSvg } from './assets/youtube.svg';
 
 export function NavBar() {
@@ -50,7 +51,10 @@ export function NavBar() {
 
   return (
     <Container>
-      <Leading>{t(translations.name)}</Leading>
+      <Leading>
+        <Logo as={LogoSvg} />
+        {t(translations.name)}
+      </Leading>
 
       <Trailing>
         <ServiceConnectButton
@@ -134,4 +138,11 @@ const ServiceConnectButton = styled.button`
 const Icon = styled.svg`
   height: 1.5rem;
   margin-right: 0.375rem;
+`;
+
+const Logo = styled.svg`
+  fill: var(--keyColor);
+  height: 1.5rem;
+  margin-right: 0.375rem;
+  width: 100%;
 `;

@@ -49,6 +49,10 @@ export function AppleMusicResults({ itemTitle }: AppleMusicResultsProps) {
     instance.play();
   };
 
+  const didClickAddToPlaylist = async (song: MusicKit.Songs) => {
+    await music.addToLibrary(song.id);
+  };
+
   return (
     <Container>
       <MusicResults>
@@ -71,6 +75,7 @@ export function AppleMusicResults({ itemTitle }: AppleMusicResultsProps) {
                 .replace('{h}', '56')}
               onClickItem={() => didClickItem(song)}
               onClickPreview={() => didClickItem(song)}
+              onClickAddToPlaylist={() => didClickAddToPlaylist(song)}
             />
           ))}
 
