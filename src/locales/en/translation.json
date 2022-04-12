@@ -16,7 +16,7 @@
   "appleMusicResults": {
     "header": "Apple Music Results",
     "initialStatusText": "Select a song from your YouTube playlists to search it on Apple Music.",
-    "noResultsFound": "No results have been found for {{itemTitle}}"
+    "noResultsFound": "No results have been found for: {{itemTitle}}"
   },
   "youtubeResults": {
     "header": "My YouTube Playlists"

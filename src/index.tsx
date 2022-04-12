@@ -74,6 +74,7 @@ declare global {
       'apple-music-volume': any;
       'apple-music-playback-controls': any;
       'apple-music-progress': any;
+      'apple-music-card-player': any;
     }
   }
 }

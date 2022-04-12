@@ -38,7 +38,7 @@ export function AppleMusicResults({ itemTitle }: AppleMusicResultsProps) {
       setStatusText(
         response?.data?.results?.songs?.data
           ? ''
-          : t(translations.appleMusicResults.noResultsFound),
+          : t(translations.appleMusicResults.noResultsFound, { itemTitle }),
       );
     })();
   }, [itemTitle, t]);
@@ -46,16 +46,7 @@ export function AppleMusicResults({ itemTitle }: AppleMusicResultsProps) {
   const didClickItem = async (song: MusicKit.Songs) => {
     const instance = MusicKit.getInstance();
     await instance.setQueue({ song: song.id });
-    if (instance.playbackState !== MusicKit.PlaybackState.PLAYING) {
-      instance.play();
-    }
-  };
-
-  const didClickPreview = (previews?: MusicKit.Preview[]) => {
-    if (!previews) return;
-
-    const audio = new Audio(previews[0].url);
-    audio.play();
+    instance.play();
   };
 
   return (
@@ -79,7 +70,7 @@ export function AppleMusicResults({ itemTitle }: AppleMusicResultsProps) {
                 .replace('{w}', '56')
                 .replace('{h}', '56')}
               onClickItem={() => didClickItem(song)}
-              onClickPreview={() => didClickPreview(song.attributes?.previews)}
+              onClickPreview={() => didClickItem(song)}
             />
           ))}
 

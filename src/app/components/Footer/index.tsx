@@ -3,7 +3,7 @@
  * Footer
  *
  */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components/macro';
 import { backdropFilter } from 'styles/constants';
@@ -16,10 +16,35 @@ export function Footer() {
     // eslint-disable-next-line no-nested-ternary
     theme === 'system' ? (isSystemDark ? 'dark' : 'light') : theme;
 
+  const [mediaItems, setMediaItems] = useState<MusicKit.MediaItem[]>([]);
+
+  const queueItemsDidChange = queue => {
+    setMediaItems(queue as MusicKit.MediaItem[]);
+  };
+
+  useEffect(() => {
+    MusicKit.getInstance().addEventListener(
+      'queueItemsDidChange',
+      queueItemsDidChange,
+    );
+
+    return () => {
+      MusicKit.getInstance().removeEventListener(
+        'queueItemsDidChange',
+        queueItemsDidChange as any,
+      );
+    };
+  });
+
   return (
     <Container>
       <apple-music-playback-controls theme={selectedTheme} />
-      <apple-music-progress theme={selectedTheme} />
+      <ProgressContainer>
+        <CurrentMediaItem>
+          {`${mediaItems?.[0]?.artistName} - ${mediaItems?.[0]?.title}`}
+        </CurrentMediaItem>
+        <apple-music-progress theme={selectedTheme} />
+      </ProgressContainer>
     </Container>
   );
 }
@@ -32,20 +57,36 @@ const Container = styled.footer`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 1rem 1rem 0.3125rem;
+  padding: 0.5rem 1rem;
   position: fixed;
   width: 100%;
   z-index: 99;
 
   apple-music-playback-controls {
-    margin: 0 0 0.6875rem;
     margin-right: 1rem;
   }
 
   apple-music-progress {
-    margin-right: 1rem;
     width: 100%;
   }
 
   ${backdropFilter}
+`;
+
+const CurrentMediaItem = styled.span`
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+`;
+
+const ProgressContainer = styled.div`
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
 `;
