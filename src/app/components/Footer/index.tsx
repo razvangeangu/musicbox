@@ -26,13 +26,13 @@ export function Footer() {
   };
 
   useEffect(() => {
-    MusicKit.getInstance().addEventListener(
+    MusicKit.getInstance()?.addEventListener(
       'queueItemsDidChange',
       queueItemsDidChange,
     );
 
     return () => {
-      MusicKit.getInstance().removeEventListener(
+      MusicKit.getInstance()?.removeEventListener(
         'queueItemsDidChange',
         queueItemsDidChange as any,
       );

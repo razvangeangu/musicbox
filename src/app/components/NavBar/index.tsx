@@ -40,12 +40,15 @@ export function NavBar() {
   };
 
   useEffect(() => {
-    setIsMusicConnected(MusicKit.getInstance().isAuthorized);
+    const asyncConnectivityCheck = setTimeout(() => {
+      setIsMusicConnected(MusicKit.getInstance()?.isAuthorized);
+    });
 
     document.addEventListener('gauth2', didChangeGAuth);
 
     return () => {
       document.removeEventListener('gauth2', didChangeGAuth);
+      clearTimeout(asyncConnectivityCheck);
     };
   }, []);
 

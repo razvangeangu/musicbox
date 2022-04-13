@@ -7,9 +7,9 @@ const authenticate = async () => {
       document.dispatchEvent(new CustomEvent('gauth2', { detail: signedIn }));
     });
 
-    if (currentUser) {
+    try {
       await currentUser.reloadAuthResponse();
-    } else {
+    } catch (error) {
       await auth.signIn({
         scope: 'https://www.googleapis.com/auth/youtube.readonly',
       });
