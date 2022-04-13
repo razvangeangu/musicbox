@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/musicbox/static/css/main.6dc24418.css",
-    "main.js": "/musicbox/static/js/main.46843eeb.js",
+    "main.js": "/musicbox/static/js/main.e7c49caa.js",
     "static/js/640.8a5d33c0.chunk.js": "/musicbox/static/js/640.8a5d33c0.chunk.js",
     "static/js/795.d8beceb5.chunk.js": "/musicbox/static/js/795.d8beceb5.chunk.js",
     "static/js/945.b2221dc4.chunk.js": "/musicbox/static/js/945.b2221dc4.chunk.js",
@@ -15,6 +15,6 @@
   },
   "entrypoints": [
     "static/css/main.6dc24418.css",
-    "static/js/main.46843eeb.js"
+    "static/js/main.e7c49caa.js"
   ]
 }
