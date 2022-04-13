@@ -83,7 +83,7 @@ export function HomePage() {
           swipeable
           emulateTouch
           centerMode
-          centerSlidePercentage={75}
+          centerSlidePercentage={60}
           onChange={didChangeCarousel}
         >
           {playlists?.items?.map((item, itemIndex) => (
