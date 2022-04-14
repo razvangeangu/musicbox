@@ -27,6 +27,15 @@ jobs:
           yarn
           yarn build
 
+      - name: Test 🧪
+        run: |
+          yarn test
+
+      - name: Coveralls 🙈
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
