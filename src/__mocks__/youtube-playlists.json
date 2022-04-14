@@ -1,0 +1,92 @@
+{
+  "kind": "youtube#playlistListResponse",
+  "etag": "jf30Rkv5Jszya8I0aQO2GLKF9j0",
+  "pageInfo": {
+    "totalResults": 2,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#playlist",
+      "etag": "_s6wIJPAUwasfLuqVJQrCwNmpZU",
+      "id": "PLAkkNPSZ-2RACZEEkYATU8EKnYLWQlCU1",
+      "snippet": {
+        "publishedAt": "2022-02-06T16:15:05Z",
+        "channelId": "UCWKeiCOC0iWYv5i380p7rlw",
+        "title": "Irina 🎶",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/951kMG-Me4k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/951kMG-Me4k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/951kMG-Me4k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/951kMG-Me4k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/951kMG-Me4k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Razvan Geangu",
+        "localized": {
+          "title": "Irina 🎶",
+          "description": ""
+        }
+      },
+      "contentDetails": {
+        "itemCount": 4
+      }
+    },
+    {
+      "kind": "youtube#playlist",
+      "etag": "l4eZWzh2duTfl5jjQieeWjwuzQ8",
+      "id": "PLAkkNPSZ-2RDnCODjkube5L2cg4YG-6Jx",
+      "snippet": {
+        "publishedAt": "2021-10-01T21:55:03Z",
+        "channelId": "UCWKeiCOC0iWYv5i380p7rlw",
+        "title": "🦦🎶",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/70VrvkfjJjg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/70VrvkfjJjg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/70VrvkfjJjg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Razvan Geangu",
+        "localized": {
+          "title": "🦦🎶",
+          "description": ""
+        }
+      },
+      "contentDetails": {
+        "itemCount": 52
+      }
+    }
+  ]
+}

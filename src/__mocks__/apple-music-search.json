@@ -1,0 +1,227 @@
+{
+  "results": {
+    "songs": {
+      "href": "/v1/catalog/gb/search?limit=5&term=Michael+Jackson+-+Liberian+Girl&types=songs",
+      "next": "/v1/catalog/gb/search?offset=8&term=Michael+Jackson+-+Liberian+Girl&types=songs",
+      "data": [
+        {
+          "id": "559334754",
+          "type": "songs",
+          "href": "/v1/catalog/gb/songs/559334754",
+          "attributes": {
+            "previews": [
+              {
+                "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/21/09/03/2109030d-bd57-0d91-4a4a-f93c68af32f6/mzaf_16606146110352344556.plus.aac.p.m4a"
+              }
+            ],
+            "artwork": {
+              "width": 3698,
+              "height": 3698,
+              "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/8d/97/f4/8d97f427-2d17-1a51-1714-324483eb5fc1/886443546264.jpg/{w}x{h}bb.jpg",
+              "bgColor": "ffffff",
+              "textColor1": "0f0d0d",
+              "textColor2": "581116",
+              "textColor3": "3f3e3d",
+              "textColor4": "794145"
+            },
+            "artistName": "Michael Jackson",
+            "url": "https://music.apple.com/gb/album/liberian-girl/559334659?i=559334754",
+            "discNumber": 1,
+            "genreNames": [
+              "Pop",
+              "Music",
+              "Pop/Rock",
+              "Dance",
+              "Rock",
+              "R&B/Soul",
+              "Contemporary R&B"
+            ],
+            "durationInMillis": 232802,
+            "releaseDate": "1987-08-31",
+            "name": "Liberian Girl",
+            "isrc": "USSM11204983",
+            "hasLyrics": true,
+            "albumName": "Bad",
+            "playParams": {
+              "id": "559334754",
+              "kind": "song"
+            },
+            "trackNumber": 4,
+            "composerName": "Michael Jackson"
+          }
+        },
+        {
+          "id": "551515753",
+          "type": "songs",
+          "href": "/v1/catalog/gb/songs/551515753",
+          "attributes": {
+            "previews": [
+              {
+                "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/06/fe/65/06fe655d-e825-f2ce-7200-8e30bab933f4/mzaf_2251523485913676582.plus.aac.p.m4a"
+              }
+            ],
+            "artwork": {
+              "width": 1500,
+              "height": 1500,
+              "url": "https://is2-ssl.mzstatic.com/image/thumb/Features124/v4/0b/fb/b5/0bfbb592-e2ce-065a-a098-09f55cee22db/dj.iziroksp.jpg/{w}x{h}bb.jpg",
+              "bgColor": "ffffff",
+              "textColor1": "0a0909",
+              "textColor2": "0f0e0d",
+              "textColor3": "3b3a3a",
+              "textColor4": "3f3e3d"
+            },
+            "artistName": "Michael Jackson",
+            "url": "https://music.apple.com/gb/album/liberian-girl/551515699?i=551515753",
+            "discNumber": 1,
+            "genreNames": [
+              "Pop",
+              "Music",
+              "Pop/Rock",
+              "Dance",
+              "R&B/Soul",
+              "Contemporary R&B",
+              "Rock"
+            ],
+            "durationInMillis": 232802,
+            "releaseDate": "1987-08-31",
+            "name": "Liberian Girl",
+            "isrc": "USSM11204983",
+            "hasLyrics": true,
+            "albumName": "Bad (25th Anniversary Edition)",
+            "playParams": {
+              "id": "551515753",
+              "kind": "song"
+            },
+            "trackNumber": 4,
+            "composerName": "Michael Jackson"
+          }
+        },
+        {
+          "id": "655262735",
+          "type": "songs",
+          "href": "/v1/catalog/gb/songs/655262735",
+          "attributes": {
+            "previews": [
+              {
+                "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/9d/48/d6/9d48d6ed-2065-6e7b-e6b8-02e1c90a476d/mzaf_7643638702960319999.plus.aac.p.m4a"
+              }
+            ],
+            "artwork": {
+              "width": 1500,
+              "height": 1500,
+              "url": "https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/f7/be/db/f7bedbe7-8ef8-36ae-f227-d407e1cf0ec6/MichaelJackson_BadRemastered_G010002832827D_F_001_RGB.jpeg/{w}x{h}bb.jpg",
+              "bgColor": "ffffff",
+              "textColor1": "000000",
+              "textColor2": "550c16",
+              "textColor3": "333333",
+              "textColor4": "773d44"
+            },
+            "artistName": "Michael Jackson",
+            "url": "https://music.apple.com/gb/album/liberian-girl/655260476?i=655262735",
+            "discNumber": 3,
+            "genreNames": ["Pop", "Music"],
+            "durationInMillis": 232802,
+            "releaseDate": "1987-08-31",
+            "name": "Liberian Girl",
+            "isrc": "USSM11204983",
+            "hasLyrics": true,
+            "albumName": "The Indispensable Collection",
+            "playParams": {
+              "id": "655262735",
+              "kind": "song"
+            },
+            "trackNumber": 4,
+            "composerName": "Michael Jackson"
+          }
+        },
+        {
+          "id": "888426104",
+          "type": "songs",
+          "href": "/v1/catalog/gb/songs/888426104",
+          "attributes": {
+            "previews": [
+              {
+                "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/7e/e6/de/7ee6deb2-9ace-496f-58ab-419f763f4f63/mzaf_12204043542831222622.plus.aac.p.m4a"
+              }
+            ],
+            "artwork": {
+              "width": 1500,
+              "height": 1500,
+              "url": "https://is3-ssl.mzstatic.com/image/thumb/Music2/v4/c1/1f/1e/c11f1e68-8062-3ea5-f949-7be30cafd3c4/dj.lgovhcfq.jpg/{w}x{h}bb.jpg",
+              "bgColor": "f4f0ef",
+              "textColor1": "220f09",
+              "textColor2": "351e11",
+              "textColor3": "4c3c37",
+              "textColor4": "5b483d"
+            },
+            "artistName": "Michael Jackson",
+            "url": "https://music.apple.com/gb/album/liberian-girl-uk-edit/888426048?i=888426104",
+            "discNumber": 2,
+            "genreNames": ["R&B/Soul", "Music"],
+            "durationInMillis": 220333,
+            "releaseDate": "2013-06-27",
+            "name": "Liberian Girl (UK Edit)",
+            "isrc": "USSM11303331",
+            "hasLyrics": true,
+            "albumName": "Chilled R&B (The Gold Edition)",
+            "playParams": {
+              "id": "888426104",
+              "kind": "song"
+            },
+            "trackNumber": 1,
+            "composerName": "Michael Jackson"
+          }
+        },
+        {
+          "id": "380751847",
+          "type": "songs",
+          "href": "/v1/catalog/gb/songs/380751847",
+          "attributes": {
+            "previews": [
+              {
+                "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6f/9a/72/6f9a7221-99a8-d3fa-2232-7e46ec5ea068/mzaf_5816267686696242918.plus.aac.p.m4a"
+              }
+            ],
+            "artwork": {
+              "width": 620,
+              "height": 620,
+              "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/f5/6c/73/mzi.oujgpefr.jpg/{w}x{h}bb.jpg",
+              "bgColor": "130e0a",
+              "textColor1": "fffffd",
+              "textColor2": "eedacf",
+              "textColor3": "cfcecc",
+              "textColor4": "c2b1a8"
+            },
+            "artistName": "The Sunset Lounge Orchestra",
+            "url": "https://music.apple.com/gb/album/liberian-girl/380751244?i=380751847",
+            "discNumber": 1,
+            "genreNames": [
+              "New Age",
+              "Music",
+              "Electronic",
+              "Easy Listening",
+              "Rock"
+            ],
+            "durationInMillis": 251335,
+            "releaseDate": "2007-01-01",
+            "name": "Liberian Girl",
+            "isrc": "NLG620428495",
+            "hasLyrics": false,
+            "albumName": "The Michael Jackson Cool Down Experience, Part 2",
+            "playParams": {
+              "id": "380751847",
+              "kind": "song"
+            },
+            "trackNumber": 7
+          }
+        }
+      ]
+    }
+  },
+  "meta": {
+    "results": {
+      "order": ["songs"],
+      "rawOrder": ["songs"]
+    }
+  }
+}

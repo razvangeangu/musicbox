@@ -61,10 +61,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 90,
-        "functions": 90,
-        "lines": 90,
-        "statements": 90
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
       }
     }
   },
@@ -100,7 +100,7 @@
     "@reduxjs/toolkit": "1.8.1",
     "@stylelint/postcss-css-in-js": "0.37.2",
     "@testing-library/jest-dom": "5.16.4",
-    "@testing-library/react": "13.0.0",
+    "@testing-library/react": "12.1.5",
     "@types/express": "4.17.13",
     "@types/fontfaceobserver": "2.1.0",
     "@types/gapi": "0.0.41",

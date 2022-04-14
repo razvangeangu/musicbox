@@ -4,7 +4,7 @@
  *
  */
 import { youtube } from 'api';
-import ProgressIndicator from 'app/components/ProgressIndicator';
+import { ProgressIndicator } from 'app/components/ProgressIndicator';
 import { AppleMusicResults } from 'app/pages/HomePage/components/AppleMusicResults';
 import { PlaylistItems } from 'app/pages/HomePage/components/PlaylistItems';
 import { translations } from 'locales/translations';

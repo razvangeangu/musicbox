@@ -10,9 +10,7 @@ export interface ProgressIndicatorProps {
   className?: string;
 }
 
-export default function ProgressIndicator({
-  className,
-}: ProgressIndicatorProps) {
+export function ProgressIndicator({ className }: ProgressIndicatorProps) {
   return (
     <Spinner className={className}>
       <SpinnerBlade />

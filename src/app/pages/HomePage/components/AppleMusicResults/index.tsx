@@ -4,8 +4,8 @@
  *
  */
 import { music } from 'api';
-import MusicItem from 'app/components/MusicItem';
-import ProgressIndicator from 'app/components/ProgressIndicator';
+import { MusicItem } from 'app/components/MusicItem';
+import { ProgressIndicator } from 'app/components/ProgressIndicator';
 import { translations } from 'locales/translations';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -41,7 +41,8 @@ export function AppleMusicResults({ itemTitle }: AppleMusicResultsProps) {
           : t(translations.appleMusicResults.noResultsFound, { itemTitle }),
       );
     })();
-  }, [itemTitle, t]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [itemTitle]);
 
   const didClickItem = async (song: MusicKit.Songs) => {
     const instance = MusicKit.getInstance();

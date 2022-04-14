@@ -4,8 +4,8 @@
  *
  */
 import { youtube } from 'api';
-import MusicItem from 'app/components/MusicItem';
-import ProgressIndicator from 'app/components/ProgressIndicator';
+import { MusicItem } from 'app/components/MusicItem';
+import { ProgressIndicator } from 'app/components/ProgressIndicator';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
 

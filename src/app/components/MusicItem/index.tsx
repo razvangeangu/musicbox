@@ -20,7 +20,7 @@ export interface MusicItemProps {
   onClickAddToPlaylist?: () => void;
 }
 
-export default function MusicItem({
+export function MusicItem({
   className,
   name,
   thumbnailUrl,
